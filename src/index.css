@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #050801;    
+    font-weight: bold;
+    font-family:'Josefin Sans', sans-serif;
+    list-style-type: none;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    letter-spacing: 7px;
+    overflow: hidden;
+    margin-right: 50px;
+    border-radius: 7px;
+   
+}
+a:hover{
+    background: aliceblue;
+    color: black;
+    box-shadow: 0 0 5px aliceblue,
+                0 0 25px aliceblue,
+                0 0 50px aliceblue,
+                0 0 200px aliceblue;
+     -webkit-box-reflect:below 1px linear-gradient( black);
+}
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 2px;
+   
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+ 
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px; 
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;  
+}
+ body {
+   position: relative;
+   margin: 0;
+   height: 100%;
+ }
+ 
+ body {
+   font-family:'Josefin Sans', sans-serif;
+   font-size: 1rem; 
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: #141414;
+ }
+ 
+ 
