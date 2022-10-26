@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function StarshipsRender() {
+export function StarshipsRender() {
   const [Starships, setStarships] = useState([]);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ return (
   );
 }
 
-export default StarshipsRender;
+
