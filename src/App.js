@@ -10,8 +10,7 @@ export function App() {
   return (
     <BrowserRouter>   
       <div>     
-        <button className="LogiSignUpStyle">LOGIN</button>
-        <button className="LogiSignUpStyle">SIGN UP</button>
+      
         <img src={logo} alt="star wars white logo" className="LogoStyle" />
         <Navigationbar />
 
@@ -31,7 +30,8 @@ export function App() {
             <span></span>
             Starships
           </button>
-        
+          <button className="LogiSignUpStyle">LOGIN</button>
+        <button className="LogiSignUpStyle">SIGN UP</button>
         <hr></hr>        
         <Routes>
         <Route path="/Home" element={<Home />} />
