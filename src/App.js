@@ -9,22 +9,27 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 export function App() {
   return (
     <BrowserRouter>
+     
+    
+        
       <div>
-        <Navigationbar />
-        <Routes>
-          <Route path="/Home" component={Home} />
-          <Route path="/StarshipsRender" component={StarshipsRender} />
-        </Routes>
-
+   
      
 
-        <Home />
+     
         <button className="LogiSignUpStyle">LOGIN</button>
         <button className="LogiSignUpStyle">SIGN UP</button>
 
-        <div></div>
+       
         <img src={logo} alt="star wars white logo" className="LogoStyle" />
+        <Navigationbar />
+        <Routes>
+        
+          <Route path="/Home" element={<Home/>} />
+          <Route path="/StarshipsRender" element={<StarshipsRender/>}/>
+        </Routes> 
         <hr></hr>
+       
         <div>
           <button href="#">
             <span></span>
