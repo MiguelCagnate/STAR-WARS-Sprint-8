@@ -12,7 +12,7 @@ body{
     height: 100vh;
     background: #050801;    
     font-weight: bold;
-    font-family:'Josefin Sans', sans-serif;
+    font-family:'Sarpanch', sans-serif;
     list-style-type: none;
     background-image: url('/src/img/sw_falconm.jpg');
     background-repeat: no-repeat;   
@@ -33,16 +33,19 @@ button{
     margin-right: 50px;
     border-radius: 7px;
     border: none;
+    font-family: 'Sarpanch', sans-serif;
+    font-weight: 600;
+    
    
 }
 button:hover{
-    background: white;
+    background: #07C1F7;
     color: black;
-    box-shadow: 0 0 5px aliceblue,
-                0 0 25px aliceblue,
-                0 0 50px aliceblue,
-                0 0 200px aliceblue;
-     -webkit-box-reflect:below 1px linear-gradient( black);
+    box-shadow: 0 0 5px #0783f7,
+                0 0 25px #0783f7,
+                0 0 50px #07C1F7,
+                0 0 200px #07C1F7;
+     -webkit-box-reflect:below 1px linear-gradient(black);
 }
 button:nth-child(1){
     filter: hue-rotate(270deg);
@@ -58,7 +61,7 @@ button span:nth-child(1){
     top: 0;
     left: 0;
     width: 500%;
-    height: 2px;
+    height: 3px;
    
 }
 @keyframes animate1{
@@ -97,7 +100,7 @@ button span:nth-child(4){
     height: 100%;  
 }
 
- 
+
 
  
  

@@ -8,29 +8,15 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 export function App() {
   return (
-    <BrowserRouter>
-     
-    
-        
-      <div>
-   
-     
-
-     
+    <BrowserRouter>   
+      <div>     
         <button className="LogiSignUpStyle">LOGIN</button>
         <button className="LogiSignUpStyle">SIGN UP</button>
-
-       
         <img src={logo} alt="star wars white logo" className="LogoStyle" />
         <Navigationbar />
-        <Routes>
+
+        <hr></hr>       
         
-          <Route path="/Home" element={<Home/>} />
-          <Route path="/StarshipsRender" element={<StarshipsRender/>}/>
-        </Routes> 
-        <hr></hr>
-       
-        <div>
           <button href="#">
             <span></span>
             <span></span>
@@ -45,10 +31,14 @@ export function App() {
             <span></span>
             Starships
           </button>
-        </div>
-        <hr></hr>
-        <div></div>
+        
+        <hr></hr>        
+        <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/StarshipsRender" element={<StarshipsRender />} />
+      </Routes>
       </div>
+     
     </BrowserRouter>
   );
 }

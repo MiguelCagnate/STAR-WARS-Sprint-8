@@ -1,6 +1,4 @@
 import React from "react";
-
-
 export const FullDataCard = () => {
   return (
     <div>
