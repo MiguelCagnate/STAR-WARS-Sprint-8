@@ -20,12 +20,17 @@ export function FullDataShips() {
         {Starships.length === 0 && <p>Loading...⏲</p>}
       </ul>
 
-      {Starships.map((ships, i) => {
+      {Starships.map((ships, i) => {       
+        let getNumber = ships.url.split("");
+        let getId = getNumber.slice(-2, -1);
         return (
           <li key={i}>
-            <h4 className="DataStyle">
-              {ships.name} <li className="ModelStarshipStyle">{ships.model}</li>{" "}
-            </h4>
+            <link>
+              <h4 className="DataStyle">
+                {ships.name}{" "}
+                <li className="ModelStarshipStyle">{ships.model}</li>{" "}
+              </h4>
+            </link>
           </li>
         );
       })}

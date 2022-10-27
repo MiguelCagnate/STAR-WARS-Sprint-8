@@ -5,6 +5,7 @@ import { StarshipsRender } from "./Starships";
 import { Home } from "./Home";
 import { Navigationbar } from "./Navigationbar";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { FullDataShips } from "./FullDataShips";
 
 
 export function App() {
@@ -31,11 +32,12 @@ export function App() {
         </button>
         <button className="LogiSignUpStyle">LOGIN</button>
         <button className="LogiSignUpStyle">SIGN UP</button>
-        <button> All Data Ships</button>
+        <button onClick={FullDataShips}> All Data Ships</button>
+        
         <hr></hr>
         <Routes>
           <Route exact path="/Home" element={<Home />} />
-          <Route path="/StarshipsRender" element={<StarshipsRender />} />
+          <Route path="/StarshipsRender" element={<StarshipsRender />} />        
         </Routes>
       </div>
     </BrowserRouter>
