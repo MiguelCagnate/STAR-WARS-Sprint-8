@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export function StarshipsRender() {
+export function FullDataShips() {
   const [Starships, setStarships] = useState([]);
 
   useEffect(() => {
     const getStarships = async () => {
-      const url = "https://swapi.py4e.com/api/starships/";
+      const url = "https://swapi.dev/api/starships/?page=1";
       const result = await axios.get(url);
 
       setStarships(result.data.results);
     };
     getStarships();
-},[]);
+  }, []);
 
-return (
+  return (
     <div>
-     <ul className="DataStyle">
+      <ul className="DataStyle">
         {Starships.length === 0 && <p>Loading...⏲</p>}
       </ul>
+
       {Starships.map((ships, i) => {
         return (
           <li key={i}>
             <h4 className="DataStyle">
-            {ships.name} <li className="ModelStarshipStyle">{ships.model}</li>{" "}
+              {ships.name} <li className="ModelStarshipStyle">{ships.model}</li>{" "}
             </h4>
           </li>
         );
@@ -31,5 +32,3 @@ return (
     </div>
   );
 }
-
-

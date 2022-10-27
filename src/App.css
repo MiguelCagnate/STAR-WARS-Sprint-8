@@ -7,7 +7,7 @@
   
   .LogoStyle{
     display: flexbox;
-    width: 55%;
+    width: 50%;
     padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -15,23 +15,24 @@
     margin-right: 20%;
     align-items: center;
     text-align: center;
-    border-radius: 35px;    
+    border-radius: 35px;        
   }
   
   .LogiSignUpStyle{
-  margin-left: 80%;
-  display: inline-flexbox;
-  margin-right: 7px;
+   display:contents ;
+  margin-left: 70%;
+ margin-right: 1px;
   color: black;
   background-color: white;
   font-family: 'Sarpanch', sans-serif;
+  
   }
   
   .DataStyle{
-  color: aliceblue;
+  color: white;
   font-family:'Sarpanch', sans-serif;
   list-style-type: none;
-  background-color: rgb(39, 37, 37);
+  background-color: rgb(24, 22, 22);
   border-radius: 3px;
   margin: 5px;
   padding: 7px;
