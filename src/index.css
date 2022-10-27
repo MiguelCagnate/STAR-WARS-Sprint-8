@@ -4,101 +4,138 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 body{
-    display: flex;
+    display:flex;
     justify-content: center;         
     font-weight: bold;
     font-family:'Sarpanch', sans-serif;
     list-style-type: none;
-    background-image: url('/src/img/sw_falconm.jpg');
-    background-repeat: no-repeat;   
- 
-    
+    background-image: url('./img/sw_falconm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
-button{
+p{
     position: relative;
     display: inline-block;
     padding: 7px 20px;
     margin: 15px 5px;
-    color: black;
+    color: #03e9f4;
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.4s;
+    transition: 0.3s;
     letter-spacing: 5px;
     overflow: hidden;
     margin-right: 40px;
-    border-radius: 7px;
-    border: none;
+    border-radius: 7px;  
     font-family: 'Sarpanch', sans-serif;
-    font-weight: 600;
-    border-color: white;
-    background-color: white;
-   
-}
-button:hover{
-    background: white;
-    color: black;
-    box-shadow: 0 0 5px white,
-                0 0 25px white,
-                0 0 50px white,
-                0 0 200px white;
-     -webkit-box-reflect:below 1px linear-gradient(white);
-}
-button:nth-child(1){
-    filter: hue-rotate(270deg);
-}
-button:nth-child(2){
-    filter: hue-rotate(110deg);
-}
-button span{
-    position: absolute;
-    display: block;
-}
-button span:nth-child(1){
-    top: 0;
-    left: 0;
-    width: 500%;
-    height: 3px;
-   
-}
-@keyframes animate1{
-    0%{
-        left: -100%;
-    }
-    50%,100%{
-        left: 100%;
-    }
-}
-button span:nth-child(2){
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
- 
-}
-@keyframes animate2{
-    0%{
-        top: -100%;
-    }
-    50%,100%{
-        top: 100%;
-    }
-}
-button span:nth-child(3){
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 5px; 
-}
-button span:nth-child(4){
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;  
+    font-weight: 600;  
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
+    background-image: url('./img/sw_falconm.jpg');
+    background-repeat: no-repeat; 
 }
 
+p:nth-child(1)
+{
+	filter: hue-rotate(290deg);
+}
+p:nth-child(3)
+{
+	filter: hue-rotate(110deg);
+}
+p:hover
+{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+p span
+{
+	position: absolute;
+	display: block;
+}
+p span:nth-child(1)
+{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;	
+}
+@keyframes animate1
+{
+	0%
+	{
+		left: -100%;
+	}
+	50%, 100%
+	{
+		left: 100%;
+	}
+}
+p span:nth-child(2)
+{
+	top: -100px;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03e9f4);
+	
+	
+}
+@keyframes animate2
+{
+	0%
+	{
+		top: -100%;
+	}
+	50%, 100%
+	{
+		top: 100%;
+	}
+}
+p span:nth-child(3)
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03e9f4);
 
-
- 
- 
+	
+}
+@keyframes animate3
+{
+	0%
+	{
+		right: -100%;
+	}
+	50%, 100%
+	{
+		right: 100%;
+	}
+}
+p span:nth-child(4)
+{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: animate4 3s linear infinite;
+	
+}
+@keyframes animate4
+{
+	0%
+	{
+		bottom: -100%;
+	}
+	50%, 100%
+	{
+		bottom: 100%;
+	}
+}

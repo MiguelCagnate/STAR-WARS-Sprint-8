@@ -5,7 +5,7 @@ import { StarshipsRender } from "./Starships";
 import { Home } from "./Home";
 import { Navigationbar } from "./Navigationbar";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { FullDataShips } from "./FullDataShips";
+
 
 
 export function App() {
@@ -13,26 +13,28 @@ export function App() {
     <BrowserRouter>
       <div>
         <img src={logo} alt="star wars white logo" className="LogoStyle" />
+        
         <Navigationbar />
-
+        
         <hr></hr>
-        <button href="#">
+        <p href="#">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Home
-        </button>
-        <button href="#">
+        </p>
+        <p href="#">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Starships          
-        </button>
-        <button className="LogiSignUpStyle">LOGIN</button>
-        <button className="LogiSignUpStyle">SIGN UP</button>
-        <button onClick={FullDataShips}> All Data Ships</button>
+        </p>
+        
+       <p> <button className="LogiSignUpStyle">LOGIN</button></p>
+        <p><button className="LogiSignUpStyle">SIGN UP</button></p>
+        
         
         <hr></hr>
         <Routes>

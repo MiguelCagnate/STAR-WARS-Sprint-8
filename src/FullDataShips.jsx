@@ -21,8 +21,7 @@ export function FullDataShips() {
       </ul>
 
       {Starships.map((ships, i) => {       
-        let getNumber = ships.url.split("");
-        let getId = getNumber.slice(-2, -1);
+   
         return (
           <li key={i}>
             <link>
