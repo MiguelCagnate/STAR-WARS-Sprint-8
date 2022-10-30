@@ -1,38 +1,46 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
+import "./FullDataShips.css";
+
 export function FullDataShips() {
-  const [Starships, setStarships] = useState([]);
+  let { id } = useParams();
+  const [starship, setStarship] = useState({});
 
   useEffect(() => {
-    const getStarships = async () => {
-      const url = "https://swapi.dev/api/starships/?page=1";
+    const getStarshipData = async () => {
+      const url = `https://swapi.dev/api/starships/${id}`;
       const result = await axios.get(url);
-
-      setStarships(result.data.results);
+      setStarship(result.data);
     };
-    getStarships();
+    getStarshipData();
   }, []);
 
   return (
     <div>
-      <ul className="DataStyle">
-        {Starships.length === 0 && <p>Loading...⏲</p>}
-      </ul>
-
-      {Starships.map((ships, i) => {       
-   
-        return (
-          <li key={i}>
-            <link>
-              <h4 className="DataStyle">
-                {ships.name}{" "}
-                <li className="ModelStarshipStyle">{ships.model}</li>{" "}
-              </h4>
-            </link>
-          </li>
-        );
-      })}
+      <img
+        className="image"
+        src={`https://starwars-visualguide.com/assets/img/starships/${id}.jpg`}
+        alt={starship.name}
+      />
+      <h1 className="DataStyle">{starship.name}</h1>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Length</th>
+            <th>Starship Class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{starship.model}</td>
+            <td>{starship.length}</td>
+            <td>{starship.starship_class}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

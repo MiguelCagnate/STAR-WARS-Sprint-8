@@ -22,10 +22,11 @@
   flex-direction: row;
   margin-left: 80%;
   margin-right: 3px;
-  color: aliceblue;
+  color: #0274ad;
   border-style: groove;
   border-width: 1px;
-  border-color: aliceblue;
+   text-shadow: #00A9FF;
+ 
  
   font-family: "Sarpanch", sans-serif;
 }
@@ -41,9 +42,24 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  opacity: 0.7;
 }
 .ModelStarshipStyle {
   font-weight: 100;
   font-size: 13px;
   list-style-type: none;
 }
+
+.BodyStyle{
+background: url("./img/rey-kylo_escenehome.jpg");
+background-size: cover;
+  height: 100%;  
+  padding: 30px;
+  margin: 30px;
+  border-radius: 5px;
+  width: 100%;
+  opacity: 0.5;
+  color: transparent;
+}
+  
+

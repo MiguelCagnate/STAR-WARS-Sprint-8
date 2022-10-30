@@ -2,10 +2,9 @@ import React from "react";
 import "./App.css";
 import logo from "./img/sw_logo.png";
 import { StarshipsRender } from "./Starships";
+import {FullDataShips} from './FullDataShips'
 import { Home } from "./Home";
-import { Navigationbar } from "./Navigationbar";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-
+import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
 
 
 export function App() {
@@ -13,33 +12,27 @@ export function App() {
     <BrowserRouter>
       <div>
         <img src={logo} alt="star wars white logo" className="LogoStyle" />
-        
-        <Navigationbar />
-        
-        <hr></hr>
-        <p href="#">
+        <Link to="/" className="link">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Home
-        </p>
-        <p href="#">
+        </Link>
+        <Link to="/StarshipsRender" className="link">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Starships          
-        </p>
-        
-       <p> <button className="LogiSignUpStyle">LOGIN</button></p>
-        <p><button className="LogiSignUpStyle">SIGN UP</button></p>
-        
-        
+        </Link>
+       <Link className="link">LOGIN</Link>
+      <Link className="link">SIGN UP</Link>
         <hr></hr>
-        <Routes>
+         <Routes>
           <Route exact path="/Home" element={<Home />} />
           <Route path="/StarshipsRender" element={<StarshipsRender />} />        
+          <Route path="/StarshipsRender/:id" element={<FullDataShips />} />        
         </Routes>
       </div>
     </BrowserRouter>
