@@ -11,9 +11,13 @@ import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
 export function App() {
 
   return (
+    
     <BrowserRouter>
-      <div>
+
+
+<div>
         <img src={logo} alt="star wars white logo" className="LogoStyle" />
+       
         <Link to="/Home" className="link">
           <span></span>
           <span></span>
@@ -30,20 +34,24 @@ export function App() {
         </Link>
 <form>
 
-      <Link className="link">LOGIN <input  placeholder="Enter your name"></input></Link>
-      <Link className="link">SIGN UP<input  placeholder="Sign up here"></input></Link>
+      <Link className="link">LOGIN</Link>
+      <Link className="link">SIGN UP</Link>
       <Link className="link"  type="submit">Register</Link>
 
       <p className="ParagraphLogin">Already Registered{" "} / Login in?</p>
 </form>
-
+ 
         <hr></hr>
          <Routes>
           <Route exact path="/Home" element={<Home />} />
           <Route path="/StarshipsRender" element={<StarshipsRender />} />        
           <Route path="/StarshipsRender/:id" element={<FullDataShips />} />        
         </Routes>
+      
       </div>
+
+
+     
     </BrowserRouter>
   );
 }

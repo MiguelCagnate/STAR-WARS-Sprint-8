@@ -1,32 +1,19 @@
-.TitleStarshipsStyle {
-  color: aliceblue;
-  padding: 2px 2px;
-  margin: 5px;
-}
 
 .LogoStyle {
   display: flexbox;
-  width: 25%;
-  padding-bottom: 3px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  margin-left: 35%;
-  margin-right: 55%;
- 
- 
-  align-items: center;
-  text-align: center;
- 
+  width: 30%; 
+  margin-top: 1px; 
+  margin-left: 40%;
+  margin-right: 20%;
+  filter: drop-shadow(0.35rem 0.35rem 0.7rem aliceblue);
 }
 
 .LogiSignUpStyle {
   display:contents;
   flex-direction: row;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 20px;
+  margin-right: 20px;
   color: #0274ad;
-  border-style: groove;
-  border-width: 1px;
   text-shadow: #00A9FF;
   font-family: "Sarpanch", sans-serif;
 }
@@ -54,9 +41,10 @@
 background: url("./img/rey-kylo_escenehome.jpg");
 background-size: cover;
   height: 100%;  
-  padding: 20%;
-  margin-top: 4px;
-  border-radius: 5px;
+  padding: 19%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 9px;
   width: 100%;
   opacity: 0.7;
   color: transparent;
