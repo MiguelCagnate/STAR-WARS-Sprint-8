@@ -22,6 +22,10 @@ export function FullDataShips() {
       <img
         className="image"
         src={`https://starwars-visualguide.com/assets/img/starships/${id}.jpg`}
+        onError={({currentTarget }) => {
+          currentTarget.onerror = null;
+          currentTarget.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg'
+        }}
         alt={starship.name}
       />
       <h1 className="DataStyle">{starship.name}</h1>
@@ -31,13 +35,19 @@ export function FullDataShips() {
             <th>Model</th>
             <th>Length</th>
             <th>Starship Class</th>
+            <th>Atmosphering Speed</th>
+            <th>Crew</th>                     
+            <th>Passengers</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>{starship.model}</td>
             <td>{starship.length}</td>
-            <td>{starship.starship_class}</td>
+            <td>{starship.starship_class}</td>           
+            <td>{starship.max_atmosphering_speed}</td>
+            <td>{starship.crew}</td>
+            <td>{starship.passengers}</td>
           </tr>
         </tbody>
       </table>

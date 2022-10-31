@@ -7,12 +7,14 @@ import { Home } from "./Home";
 import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
 
 
+
 export function App() {
+
   return (
     <BrowserRouter>
       <div>
         <img src={logo} alt="star wars white logo" className="LogoStyle" />
-        <Link to="/" className="link">
+        <Link to="/Home" className="link">
           <span></span>
           <span></span>
           <span></span>
@@ -26,8 +28,15 @@ export function App() {
           <span></span>
           Starships          
         </Link>
-       <Link className="link">LOGIN</Link>
-      <Link className="link">SIGN UP</Link>
+<form>
+
+      <Link className="link">LOGIN <input  placeholder="Enter your name"></input></Link>
+      <Link className="link">SIGN UP<input  placeholder="Sign up here"></input></Link>
+      <Link className="link"  type="submit">Register</Link>
+
+      <p className="ParagraphLogin">Already Registered{" "} / Login in?</p>
+</form>
+
         <hr></hr>
          <Routes>
           <Route exact path="/Home" element={<Home />} />

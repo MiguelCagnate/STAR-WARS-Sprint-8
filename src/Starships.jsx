@@ -1,27 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 export function StarshipsRender() {
+  const page = useRef(1);
   const [starships, setStarships] = useState([]);
 
   useEffect(() => {
     const getStarships = async (url) => {
-      const result = await axios.get(url);
-      setStarships(result.data.results);
+      const result = await axios(url);
+      if (result.data.next) {
+        setStarships((prevStarships) => [
+          ...prevStarships,
+          ...result.data.results,
+        ]);
+      }
+      page.current = result.data.next
+        ? result.data.next.split("=")[1]
+        : page.current;
     };
 
     const handleScroll = () => {
       const distanceFromBottom =
         document.body.scrollHeight - window.innerHeight - window.scrollY;
       if (distanceFromBottom <= 0) {
-        const nextPage = starships[0];
-        debugger;
-        getStarships(nextPage);
+        getStarships(
+          `https://swapi.py4e.com/api/starships?page=${page.current}`
+        );
       }
     };
 
-    getStarships("https://swapi.py4e.com/api/starships/");
+    getStarships(`https://swapi.py4e.com/api/starships?page=${page.current}`);
 
     document.addEventListener("scroll", handleScroll);
 
