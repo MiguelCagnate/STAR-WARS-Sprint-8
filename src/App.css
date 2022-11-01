@@ -3,9 +3,10 @@
   display: flexbox;
   width: 30%; 
   margin-top: 1px; 
-  margin-left: 40%;
-  margin-right: 20%;
-  filter: drop-shadow(0.35rem 0.35rem 0.7rem aliceblue);
+  margin-left: 35%;
+  margin-right: 40%;
+  filter: drop-shadow(0.55rem 0.55rem 0.9rem aliceblue);
+  
 }
 
 .LogiSignUpStyle {

@@ -1,0 +1,14 @@
+.Welcome{
+    margin: 95px;
+    padding: 95px; 
+    font-size: 39px;
+    font-family: monospace;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #ababab;
+    color: #006ee9;  
+    text-align: center; 
+    background-image: url('/src/img/rey-kylo_escenehome.jpg');  
+    background-image: cover;    
+    border-radius: 70px; 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);   
+}
