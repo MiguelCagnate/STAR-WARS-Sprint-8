@@ -1,103 +1,60 @@
-// import React,{useState} from "react";
-// import "./App.css";
-// import logo from "./img/sw_logo.png";
-// import { StarshipsRender } from "./Starships";
-// import { FullDataShips } from "./FullDataShips";
-// import { Home } from "./Home";
-// import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
-// import { Login } from "./Login";
+import React, { useState } from "react";
 
+export function Registered() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
 
-// function Registered() {
-//   const [email, setEmail] = useState("");
-//   const [name, setName] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [phonenumber, setPhonenumber] = useState("");
-//   const [login, setLogin] = useState(true);
-//   const [flag, setFlag] = useState(false)
-// }
+  function handleSubmit(e) {
+    e.preventDefault();
 
-// function handleSubmit(e){
-//   e.preventDefault();
-// if(!email || !name || !password || !phonenumber ) {
-//   setFlag(true);
-// }else{
-//   setFlag(False)
-//   localStorage.setItem("Email", JSON.stringify(email));
-//   localStorage.setItem("Password", JSON.stringify(password));
-// console.log("Save in local Storage");
-// setLogin(!Login)
+    if (!email || !name || !password || !phonenumber) {
+      return alert("All input are required");
+    }
 
-// }
-// }
-// function handleClick(params) {
-//   setLogin(!login)
-// }
+    // Se crea el nuevo usuario
+    const user = {name,email,password,phonenumber}
 
+    // Obtenemos los usuarios guardados, si no hay se asigna un array vacio
+    const users = JSON.parse(localStorage.getItem('users')) || []
+    
+    // Agregamos el usuario
+    users.push(user)
 
+    // Actualizamos el localStorage 
+    localStorage.setItem('users', JSON.stringify(users))
+   
+    console.log("Save in local Storage");
+  }
 
-// export function App() {
-//   return (
-//     <BrowserRouter>
-//       <div>
-// {Login ? (
-
-// <>
-
-
-
-//         <img src={logo} alt="star wars white logo" className="LogoStyle" />
-//         <Link to="/Home" className="link">
-//           <span></span>
-//           <span></span>
-//           <span></span>
-//           <span></span>
-//           Home
-//         </Link>
-//         <Link to="/StarshipsRender" className="link">
-//           <span></span>
-//           <span></span>
-//           <span></span>
-//           <span></span>
-//           Starships
-//         </Link>
-      
-//         <form onSubmit={handlesubmit}>
-//           <Link
-//             className="link"
-//             onChange={(event) => setLogin(event.target.value)}
-//           >
-//             LOGIN
-//           </Link>
-//           <Link
-//             className="link"
-//             onChange={(event) => setName(event.target.value)}
-//           >
-//             SIGN UP
-//           </Link>
-//           <Link className="link" type="submit">
-//             Register
-//           </Link>
-
-//           <p className="ParagraphLogin" onClick={handleClick}>Already Registered / Login in?</p>
-
-//           {flag &&(
-//             <alert>
-//               Please fill every field
-//             </alert>
-//           )}
-
-//         </form>
-//         <hr></hr>
-//         <Routes>
-//           <Route exact path="/Home" element={<Home />} />
-//           <Route path="/StarshipsRender" element={<StarshipsRender />} />
-//           <Route path="/StarshipsRender/:id" element={<FullDataShips />} />
-//         </Routes>
-//   ):(
-//             <Login/>
-//         )}
-//       </div>
-//     </BrowserRouter>
-//   );
-// }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type={"text"}
+        name="name"
+        placeholder="Full Name"
+        onChange={({ target }) => setName(target.value)}
+      />
+      <input
+        type={"email"}
+        name="email"
+        placeholder="email"
+        onChange={({ target }) => setEmail(target.value)}
+      />
+      <input
+        type={"password"}
+        name="password"
+        placeholder="Password"
+        onChange={({ target }) => setPassword(target.value)}
+      />
+      <input
+        type={"tel"}
+        name="phone"
+        placeholder="Cellphone"
+        onChange={({ target }) => setPhonenumber(target.value)}
+      />
+      <input type="submit" value="Register" />
+    </form>
+  );
+}
