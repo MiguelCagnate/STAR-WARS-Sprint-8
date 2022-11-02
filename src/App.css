@@ -1,21 +1,19 @@
-
 .LogoStyle {
   display: flexbox;
-  width: 30%; 
-  margin-top: 1px; 
+  width: 30%;
+  margin-top: 1px;
   margin-left: 35%;
   margin-right: 40%;
   filter: drop-shadow(0.55rem 0.55rem 0.9rem aliceblue);
-  
 }
 
 .LogiSignUpStyle {
-  display:contents;
+  display: contents;
   flex-direction: row;
   margin-left: 20px;
   margin-right: 20px;
   color: #0274ad;
-  text-shadow: #00A9FF;
+  text-shadow: #00a9ff;
   font-family: "Sarpanch", sans-serif;
 }
 
@@ -38,10 +36,10 @@
   list-style-type: none;
 }
 
-.BodyStyle{
-background: url("./img/rey-kylo_escenehome.jpg");
-background-size: cover;
-  height: 100%;  
+.BodyStyle {
+  background: url("./img/rey-kylo_escenehome.jpg");
+  background-size: cover;
+  height: 100%;
   padding: 19%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -50,43 +48,55 @@ background-size: cover;
   opacity: 0.7;
   color: transparent;
 }
- 
-.ParagraphLogin{
+
+.ParagraphLogin {
   color: white;
   font-family: "Sarpanch", sans-serif;
-  margin: 2px;  
+  margin: 2px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
-  text-align: center; 
+  text-align: center;
   border-radius: 7px;
   width: fit-content;
   text-align: justify;
-  
 }
 
-.Welcome{
+.Welcome {
   background: url("./img/4k_rey-vs-kylo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-    height: 50%;  
-    padding: 37%;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    border-radius: 49%;
-    width: 100%;
-   opacity: 0.7;
-    border: none; 
-
+  height: 50%;
+  padding: 35%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 10%;
+  width: 100%;
+  opacity: 0.3;
+  border: none;
 }
 
 input {
   display: block;
-  color:#00A9FF;
+  color: #00a9ff;
+  font-family: "Sarpanch", sans-serif;
   width: 30%;
   padding: 0.5rem 1rem;
   background-color: #333;
   border: 1px solid trasparent;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
+}
+input::placeholder {
+  color: #00a9ff;
+  opacity: 0.8;
+}
+
+.NavbarOrder{
+  display: block;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  float: none;
+  
 }
