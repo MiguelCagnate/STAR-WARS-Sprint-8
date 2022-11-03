@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarpanch&display=swap");
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 0;    
 }
 body {
-  display: flex;
+  display: flexbox;
   justify-content: center;
   font-weight: bold;
   font-family: "Sarpanch", sans-serif;
@@ -13,6 +12,8 @@ body {
   background-image: url("./img/sw_falconm.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  width: 54%;
+  align-items: center;
 }
 .link {
   position:relative;

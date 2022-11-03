@@ -1,52 +1,50 @@
 .LogoStyle {
   display: flexbox;
-  width: 30%;
+  width: 36%;
   margin-top: 1px;
-  margin-left: 35%;
+  margin-left: 75%;
   margin-right: 40%;
-  filter: drop-shadow(0.55rem 0.55rem 0.9rem aliceblue);
+  filter: drop-shadow(0.55rem 0.55rem 0.9rem white);
 }
 
 .LogiSignUpStyle {
-  display: contents;
-  flex-direction: row;
-  margin-left: 20px;
-  margin-right: 20px;
+  display: inline-block;
+  flex-direction: column;
+  margin-left: 50%;
+  margin-right: 20%;
   color: #0274ad;
   text-shadow: #00a9ff;
   font-family: "Sarpanch", sans-serif;
 }
 
 .DataStyle {
+  display: flexbox;
   color: white;
   font-family: "Sarpanch", sans-serif;
   list-style-type: none;
-  background-color: rgb(24, 22, 22);
-  border-radius: 3px;
-  margin: 5px;
-  padding: 7px;
+  background-color: rgb(17, 17, 17);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
   opacity: 0.9;
-}
-.ModelStarshipStyle {
-  font-weight: 100;
-  font-size: 13px;
-  list-style-type: none;
+  width: 100%;
+  align-items: center;
 }
 
-.BodyStyle {
-  background: url("./img/rey-kylo_escenehome.jpg");
-  background-size: cover;
-  height: 100%;
-  padding: 19%;
+
+.BodyStyle { 
+  background-size: cover;  
+  padding: 20%;
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 9px;
   width: 100%;
   opacity: 0.7;
   color: transparent;
+  margin-left: 5px;
 }
 
 .ParagraphLogin {
@@ -66,13 +64,13 @@
   background: url("./img/4k_rey-vs-kylo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 50%;
-  padding: 35%;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  border-radius: 10%;
+  height: 30%;
+  padding: 37%;
+  margin-top: 11px;
+  margin-bottom: 1px;
+  border-radius: 1%;
   width: 100%;
-  opacity: 0.3;
+  opacity: 0.5;
   border: none;
 }
 
@@ -80,23 +78,27 @@ input {
   display: block;
   color: #00a9ff;
   font-family: "Sarpanch", sans-serif;
-  width: 30%;
+  width: 35%;
   padding: 0.5rem 1rem;
-  background-color: #333;
+  background-color: rgb(34, 33, 33);
   border: 1px solid trasparent;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
+  margin-top: 2%;
+  align-items: center;
+  
 }
 input::placeholder {
   color: #00a9ff;
   opacity: 0.8;
+  
 }
 
 .NavbarOrder{
-  display: block;
+  display: flex;
   justify-content: center;
   text-align: center;
-  box-sizing: border-box;
-  float: none;
+ margin-left: 40%;
+  width: 100%;
   
 }

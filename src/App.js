@@ -5,7 +5,6 @@ import { FullDataShips } from "./FullDataShips";
 import { StarshipsRender } from "./Starships";
 import { Login } from "./Login";
 import { Registered } from "./Registered";
-
 import logo from "./img/sw_logo.png";
 import "./App.css";
 
