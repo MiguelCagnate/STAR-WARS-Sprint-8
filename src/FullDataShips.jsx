@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
 import "./FullDataShips.css";
 
 export function FullDataShips() {
   let { id } = useParams();
   const [starship, setStarship] = useState({});
 
-  useEffect(() => {
+  useEffect(() => {    
     const getStarshipData = async () => {
       const url = `https://swapi.dev/api/starships/${id}`;
       const result = await axios.get(url);
       setStarship(result.data);
     };
     getStarshipData();
+     //eslint-disable-next-line
   }, []);
-
+ 
   return (
     <div>
       <img

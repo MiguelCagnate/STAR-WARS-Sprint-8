@@ -13,16 +13,16 @@ export function Registered() {
       return alert("All input are required");
     }
 
-    // Se crea el nuevo usuario
+    // new user is created
     const user = {name,email,password,phonenumber}
 
-    // Obtenemos los usuarios guardados, si no hay se asigna un array vacio
+     //Obtain saved users if there aren't, they go to empty array
     const users = JSON.parse(localStorage.getItem('users')) || []
     
-    // Agregamos el usuario
+    // Add the user
     users.push(user)
 
-    // Actualizamos el localStorage 
+    //Update Localstorae
     localStorage.setItem('users', JSON.stringify(users))
    
     console.log("Save in local Storage");
