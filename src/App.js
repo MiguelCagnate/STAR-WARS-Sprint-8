@@ -4,7 +4,9 @@ import logo from "./img/sw_logo.png";
 import StarshipsRender from "./Starships";
 import { FullDataCard } from "./FullDataCard";
 import { Home } from "./Home";
-import axios from "axios";
+import { BrowserRouter } from "react-router-dom";
+import { Routes,Route, Link } from "react-router-dom";
+
 
 
 
@@ -12,11 +14,17 @@ export function App() {
 
 
   return (    
+<BrowserRouter>
     <div>
        
-    <FullDataCard/>       
+
+       <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="FullCardData" element={<FullDataCard/>}></Route>
+       </Routes>
+        
     
-    <Home/>
+    
     
     
     <button className="LogiSignUpStyle">LOGIN</button>
@@ -26,7 +34,7 @@ export function App() {
       </div>
       <img src={logo} alt="star wars white logo" className="LogoStyle" />
       <hr></hr>
-      <a href="#">
+      <a href="#" >
         <span></span>
         <span></span>
         <span></span>
@@ -45,6 +53,7 @@ export function App() {
         <StarshipsRender />
       </div>
     </div>
+</BrowserRouter>
       
     
   )
