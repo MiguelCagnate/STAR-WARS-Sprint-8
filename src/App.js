@@ -1,62 +1,57 @@
 import React from "react";
-import "./App.css";
+import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
+import { HomePage } from "./HomePage";
+import { FullDataShips } from "./FullDataShips";
+import { StarshipsRender } from "./Starships";
+import { Login } from "./Login";
+import { Registered } from "./Registered";
 import logo from "./img/sw_logo.png";
-import StarshipsRender from "./Starships";
-import { FullDataCard } from "./FullDataCard";
-import { Home } from "./Home";
-import { BrowserRouter } from "react-router-dom";
-import { Routes,Route, Link } from "react-router-dom";
-
-
-
+import "./App.css";
 
 export function App() {
+  return (
+    <BrowserRouter>
+      <div >
+        <img src={logo} alt="star wars white logo" className="LogoStyle" />
+        
+      <div className='NavbarOrder'>
+      <hr></hr>
 
-
-  return (    
-<BrowserRouter>
-    <div>
+        <Link to="/" className="link">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Home
+        </Link>
+        <Link to="/StarshipsRender" className="link">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Starships
+        </Link>
+        <form>
+        <Link to={"/login"} className="link">
+          LOGIN{" "}
+        </Link>
+        <Link to={"/signup"} className="link">
+          SIGN UP
+        </Link>
        
-
-       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="FullCardData" element={<FullDataCard/>}></Route>
-       </Routes>
-        
-    
-    
-    
-    
-    <button className="LogiSignUpStyle">LOGIN</button>
-        <button className="LogiSignUpStyle">SIGN UP</button>
-      <div>
+      </form>
+      <hr></hr>
+      </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/StarshipsRender" element={<StarshipsRender />} />
+          <Route path="/StarshipsRender/:id" element={<FullDataShips />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Registered />} />
+        </Routes>
         
       </div>
-      <img src={logo} alt="star wars white logo" className="LogoStyle" />
-      <hr></hr>
-      <a href="#" >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Home
-      </a>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Starships
-      </a>
-      <hr></hr>
-      <div>
-        <StarshipsRender />
-      </div>
-    </div>
-</BrowserRouter>
-      
-    
-  )
+   
+    </BrowserRouter>
+  );
 }
-
-
